@@ -86,16 +86,18 @@ class SignInSide extends React.Component {
   //   }).catch((err)=> console.log(err));
     fetch('http://localhost:51149/template', {
         method: 'POST',
-        headers: {
-          'Accept': 'application/json',
-          'Content-Type': 'application/json',
-        },
+        // headers: {
+        //   'Accept': 'application/json',
+        //   'Content-Type':'application/json'
+        // },
         body: JSON.stringify({
           TemplateName: e.target.TemplateName.value,
           CompanyName: e.target.CompanyName.value,
         })
-      },function(response){
-        console.log(response);
+      }).then((response)=>{
+        console.log(response.json());
+      }).then((responseJson)=>{
+
       });
       
  }

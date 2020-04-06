@@ -40,7 +40,8 @@ class App extends Component {
 
     }
     onPaste(e, type) {
-        var data = e.clipboardData.getData('Text');
+       
+        var data = type.clipboardData.getData('Text');
         var arr = data.split('\n');
 
         arr.forEach(element => {
